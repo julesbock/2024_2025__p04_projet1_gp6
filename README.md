@@ -2,3 +2,47 @@
 Jules Bock
 Maxime Bourgain
 Adrien Baroux-Arbona
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("je suis d'accord avec moi même")
