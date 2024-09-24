@@ -1,3 +1,3 @@
  
-def fct_AJM (5):
+def fct_AJM (n):
     pass
