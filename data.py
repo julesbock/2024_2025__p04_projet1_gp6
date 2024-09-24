@@ -9,7 +9,7 @@ print (jules)
 print ("adrien est :  " + adrien)
 
 
-input("What is your name") #question essentielle du programme
+input("What is your name : ") #question essentielle du programme
 answer = "Quelqu'un"
 
 
