@@ -1,5 +1,5 @@
 maxime = ("M" + "o" + "c" + "h" + "e")
-jules = ("M"+ "o" + "g" + "o" +"s" + "s" + "e")
+jules = ("m"+ "o" + "l" + "o" +"s" + "s" + "e")
 adrien = ("C" + "r" + "o" + "t" + "t" + "e " + "universelle")
 a=12
 
