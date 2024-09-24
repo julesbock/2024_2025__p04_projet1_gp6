@@ -6,3 +6,9 @@ a = 18 # et rien d'autre
 print (maxime)
 input("What is your name") #question essentielle du programme
 answer = "Quelqu'un"
+
+
+
+
+
+print("Answer is wrong if you write adrien ")
