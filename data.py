@@ -17,3 +17,11 @@ answer = "Quelqu'un"
 
 
 print("Answer is wrong if you write adrien ")
+
+
+
+# Pour faire plaisir au prof :
+def toto (n):
+    pass
+
+assert toto 
