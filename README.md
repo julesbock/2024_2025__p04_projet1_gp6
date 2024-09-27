@@ -2,7 +2,7 @@
 Jules Bock
 Maxime Bourgain
 Adrien Baroux-Arbona
-
+donc en gros ca c juste un fichier texte normal on peut parler et converser librement mais pas mettre de code python
 
 
 
