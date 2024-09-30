@@ -6,7 +6,11 @@ def convert_b2b (init_number, init_base, target_base):
     target_number = None
     return target_number
 
+<<<<<<< Updated upstream
 
+=======
+from data import *
+>>>>>>> Stashed changes
 
 assert convert_b2b ("101", 2, 10) == "5"
 
