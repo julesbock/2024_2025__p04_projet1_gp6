@@ -1,4 +1,4 @@
-from data import * 
+from data import *
 from tools import *
 
-ask_for_init_base()
+ask_for_init_base
