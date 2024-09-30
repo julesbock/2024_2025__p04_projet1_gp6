@@ -41,7 +41,13 @@ def execute_convertion ():
 
 
 
-
+def ask_for_target_base ():
+    target_base_entry = input ("Entrez la base souhaitée du votre nombre")
+    if check_base (target_base_entry):
+        return target_base_entry
+    else:
+        print ("La base donnée n'est pass supportée. Veuillez choisir une base de 2, 10 ou 16")
+        ask_for_target_base ()
 
 
 
