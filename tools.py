@@ -1,7 +1,7 @@
 from data import *
 
 def ask_for_init_number ():
-    init_number_entry = input("Donnez le nombre que vous voulez transformer : ")
+    init_number_entry #= input(ask_for_init_number)
     while init_number_entry_is_not_a_number:
         try:
             init_number_entry 
@@ -11,7 +11,7 @@ def ask_for_init_number ():
             print("Ceci n'est pas un nombre entier valide. Veuillez réessayer.")
 
 def ask_for_init_base ():
-    init_base_entry = input ("Entrez la base d'origine du votre nombre")
+    init_base_entry #= input (ask_for_init_base)
     if check_base (init_base_entry):
         return 
     else:
@@ -41,7 +41,7 @@ def execute_convertion ():
 
 
 def ask_for_target_base ():
-    target_base_entry = input ("Entrez la base souhaitée du votre nombre")
+    target_base_entry #= input ("Entrez la base finale pour votre nombre")
     if check_base (target_base_entry):
         return target_base_entry
     else:
