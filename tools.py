@@ -37,7 +37,6 @@ def execute_convertion ():
       convert_b2b (init_number, init_base, target_base)
     
 
-.
 
 
 
