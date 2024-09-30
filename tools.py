@@ -37,8 +37,6 @@ def execute_convertion ():
       convert_b2b (init_number, init_base, target_base)
     
 
-<<<<<<< Updated upstream
-=======
 def dec_to_bin(init_number):#le init_numebr doit etre un int
     bin_number = ""
     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
@@ -47,12 +45,6 @@ def dec_to_bin(init_number):#le init_numebr doit etre un int
         init_number //= 2
     print(bin_number)
     
-
-
-
->>>>>>> Stashed changes
-
-
 
 def ask_for_target_base ():
     target_base_entry = input ("Entrez la base souhaitée du votre nombre")
