@@ -1,4 +1,4 @@
-from data_projet_1 import *
+from data import *
 
 def ask_for_the_init_number ():
     init_number_entry = input("Donnez le nombre que vous voulez transformer : ")

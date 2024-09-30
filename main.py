@@ -1,9 +1,12 @@
+from data import *
+from tools import *
+
 def convert_b2b (init_number, init_base, target_base):
     pass
     target_number = None
     return target_number
 
-from data_projet_1 import *
+
 
 assert convert_b2b ("101", 2, 10) == "5"
 
