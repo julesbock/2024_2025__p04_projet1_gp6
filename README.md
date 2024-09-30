@@ -24,3 +24,4 @@ SUJET : binaire, décimal, hexadécimal vers binaire, décimal, hexadécimal
 
 REMARQUE : Vous n'utiliserez pas les éventuelles fonctions déjà disponibles dans python,
        pour passer d'une base à une autre.
+
