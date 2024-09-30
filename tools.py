@@ -30,3 +30,36 @@ def execute_convertion ():
     target_base = ask_for_target_base ()
     target_number = \
       convert_b2b (init_number, init_base, target_base)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
