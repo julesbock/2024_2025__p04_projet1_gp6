@@ -11,7 +11,13 @@ def ask_for_init_number ():
             print("Ceci n'est pas un nombre entier valide. Veuillez réessayer.")
 
 def ask_for_init_base ():
-    init_base_entry
+    init_base_entry = input ("Entrez la base d'origine du votre nombre")
+    while init_base_entry_is_a_base:
+        try:
+            init_base_entry_is_a_base == True
+            return init_base_entry
+        except ValueError:
+            print ("La base séléctionée est non supportée. Veuillez choisir une base de 2, 10 ou 16")
 
 
 def convert_b2b (init_number, init_base, target_base):
