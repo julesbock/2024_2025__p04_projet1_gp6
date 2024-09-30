@@ -7,5 +7,17 @@ def ask_for_the_init_number ():
             return init_number_int
         except ValueError:
             print("Ce n'est pas un nombre entier valide. Veuillez réessayer.")
-ask_for_the_init_base = 
-ask_for_the_target_base = 
+
+def convert_b2b (init_number, init_base, target_base):
+    pass
+    target_number = None
+    return target_number
+
+def execute_convertion ():
+    init_number = ask_for_the_init_number ()
+    init_base = ask_for_the_init_base ()
+    target_base = ask_for_the_target_base ()
+    target_number = \
+      convert_b2b (init_number, \
+                                    init_base, \
+                                    target_base)
