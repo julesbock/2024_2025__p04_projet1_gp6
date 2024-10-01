@@ -17,6 +17,3 @@ base_list = [binary_list, hexa_list, decimal_list]
 
 target_base_entry = input ("Entrez la base finale pour votre nombre : ")
 target_base_entry_is_a_base = True
-
-
-
