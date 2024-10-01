@@ -3,7 +3,7 @@ from data import *
 def ask_for_init_number ():
     while True:
         try:
-            init_number_entry = input("Entrez un nombre entier : ")
+            init_number_entry = input("Entrez un nombre entier :  ")
             init_number_int = int(init_number_entry) 
             return init_number_int
         except ValueError:

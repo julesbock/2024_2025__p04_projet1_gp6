@@ -1,4 +1,4 @@
-from data_projet_1 import *
+from data import *
 
 def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
     pass
