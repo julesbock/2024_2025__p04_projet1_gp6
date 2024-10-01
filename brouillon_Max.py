@@ -20,16 +20,15 @@ def check_base (init_base_entry):
         return False
     
 def check_base_bis (target_base_entry):
-    if target_base_entry == base_list:
+    if target_base_entry in base_list:
         return True
     else:
         return False
 
-def ask_for_target_base ():
-    target_base_entry 
-    for target_base_entry in base_list:
-        if target_base_entry == base_list:
-            return target_base_entry
-        else: 
-            # print (text_error_base_entry)
-            ask_for_target_base ()
+def ask_for_target_base (n):
+    target_base_entry = n 
+    while check_base_bis(n) == False:
+        print(text_error_base_entry)
+        ask_for_init_base()
+    else: 
+        return target_base_entry  # Faux de la ligne 5 à 34
