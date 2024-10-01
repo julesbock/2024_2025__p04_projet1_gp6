@@ -5,7 +5,8 @@ init_number_entry_is_not_a_number = True
 # Data ask_for_init_base
 
 init_base_entry = input ("Entrez la base d'origine du votre nombre : ")
-text_error_base_entry = "La base séléctionnée n'est pass supportée. Veuillez choisir une base de 2, 10 ou 16"
+text_error_base_entry = "La base séléctionnée n'est pas supportée. Veuillez choisir une base de 2, 10 ou 16"
+text_valid_base = "Base valide. Veuillez patienter"
 init_base_entry_is_a_base = True
 
 binary_list = ["2", "bin", "binary", "binaire"]
