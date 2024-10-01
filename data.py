@@ -1,10 +1,8 @@
 
-init_number_int = int(init_number_entry)
 init_number_entry_is_not_a_number = True
 target_base_entry_is_a_base = True
 init_base_entry_is_a_base = True
 
-init_number_entry = input("Entrez un nombre entier : ")
 init_base_entry = input ("Entrez la base d'origine du votre nombre")
 target_base_entry = input ("Entrez la base finale pour votre nombre")
 
