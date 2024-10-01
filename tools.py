@@ -10,38 +10,13 @@ def ask_for_init_number ():
             print("Ceci n'est pas un nombre entier valide. Veuillez réessayer.")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def ask_for_init_base ():
-    init_base_entry #= input (ask_for_init_base)
+    init_base_entry
     if check_base (init_base_entry):
         return 
     else:
-        print ("La base séléctionnée n'est pass supportée. Veuillez choisir une base de 2, 10 ou 16")
+        print (text_error_base_entry)
         ask_for_init_base ()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def check_base (init_base_entry):
@@ -50,19 +25,6 @@ def check_base (init_base_entry):
     else:
         return False
     
-
-
-
-
-
-
-
-
-
-
-
-    
-
 
 def convert_b2b (init_number, init_base, target_base):
     target_number = 0
@@ -90,7 +52,7 @@ def ask_for_target_base ():
     if check_base (target_base_entry):
         return target_base_entry
     else:
-        print ("La base donnée n'est pass supportée. Veuillez choisir une base de 2, 10 ou 16")
+        print (text_error_base_entry)
         ask_for_target_base ()
 
 
