@@ -2,13 +2,19 @@ from data import *
 
 def ask_for_init_number ():
     while init_number_entry_is_not_a_number:
-        init_number_entry = input(ask_for_init_number_question)
-        if int_convert_try(init_number_entry) or hexa_base_convert_try(init_number_entry):
+        init_number_entry = input(ask_for_init_number_text)
+        if is_valid(init_number_entry):
             # init_number_is_a_number()
             return init_number_entry
 
         else :
             print(Error_number_entry)
+
+
+def is_valid(number):
+    
+    return int_convert_try(number) or hexa_base_convert_try(number)
+
 
 def int_convert_try(the_number):
     try : 
@@ -36,13 +42,11 @@ def ask_for_init_base ():
         print (text_error_base_entry)
         ask_for_init_base ()
 
-
-def check_base (init_base_entry):
-    if init_base_entry == base_list:
-        return True
-    else:
-        return False
-    
+def check_base (get_init_base_entry):
+    for base in base_list :
+        if get_init_base_entry in base:
+            return True
+    return False
 
 def convert_b2b (init_number, init_base, target_base):
     target_number = 0
