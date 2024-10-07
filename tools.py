@@ -2,7 +2,7 @@ from data import *
 
 def ask_for_init_number ():
     while init_number_entry_is_not_a_number:
-        init_number_entry = input(ask_for_init_number_question)
+        init_number_entry = input(ask_for_init_number_text)
         if int_convert_try(init_number_entry) or hexa_base_convert_try(init_number_entry):
             # init_number_is_a_number()
             return init_number_entry
@@ -29,7 +29,7 @@ def hexa_base_convert_try(the_experimented_number):
 
 
 def ask_for_init_base ():
-    init_base_entry
+    init_base_entry = input ("Entrez la base d'origine du votre nombre : ")
     if check_base (init_base_entry):
         return 
     else:
@@ -66,7 +66,7 @@ def dec_to_bin(init_number):#le init_number doit etre un int
     
 
 def ask_for_target_base ():
-    target_base_entry #= input ("Entrez la base finale pour votre nombre")
+    target_base_entry = input ("Entrez la base finale pour votre nombre")
     if check_base (target_base_entry):
         return target_base_entry
     else:
