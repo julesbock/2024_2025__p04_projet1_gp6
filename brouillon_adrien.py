@@ -35,35 +35,35 @@
 
 # ask_for_init_number()
 
-text_error_base_entry = "La base séléctionnée n'est pas supportée. Veuillez choisir une base de 2, 10 ou 16"
-text_valid_base = "Base valide. Veuillez patienter"
-binary_list = ["2", "bin", "binary", "binaire"]
-hexa_list = ["16", "hexa", "hex", "hexadecimal", "hexadécimal"]
-decimal_list = ["10", "dec", "decimal", "décimal"]
-base_list = [binary_list, hexa_list, decimal_list]
-init_base_entry_is_a_base = True
-is_not_a_base = True
+# text_error_base_entry = "La base séléctionnée n'est pas supportée. Veuillez choisir une base de 2, 10 ou 16"
+# text_valid_base = "Base valide. Veuillez patienter"
+# binary_list = ["2", "bin", "binary", "binaire"]
+# hexa_list = ["16", "hexa", "hex", "hexadecimal", "hexadécimal"]
+# decimal_list = ["10", "dec", "decimal", "décimal"]
+# base_list = [binary_list, hexa_list, decimal_list]
+# init_base_entry_is_a_base = True
+# is_not_a_base = True
 
-def check_base (get_init_base_entry):
-    for base in base_list :
-        if get_init_base_entry in base:
-            return True
-    return False
+# def check_base (get_init_base_entry):
+#     for base in base_list :
+#         if get_init_base_entry in base:
+#             return True
+#     return False
 
-def ask_for_init_base ():
-    is_not_a_base = True
-    while is_not_a_base:
-        init_base_entry = input ("Entrez la base d'origine du votre nombre : ")
-        if check_base (init_base_entry):
-            is_not_a_base  = False
-            return "2"
-        else:
-            print (text_error_base_entry)
-
-
+# def ask_for_init_base ():
+#     is_not_a_base = True
+#     while is_not_a_base:
+#         init_base_entry = input ("Entrez la base d'origine du votre nombre : ")
+#         if check_base (init_base_entry):
+#             is_not_a_base  = False
+#             return "2"
+#         else:
+#             print (text_error_base_entry)
 
 
-print(ask_for_init_base ())
+
+
+# print(ask_for_init_base ())
 
 
 # def dec_to_bin(init_number):#le init_number doit etre un int
@@ -74,7 +74,7 @@ print(ask_for_init_base ())
 #         init_number //= 2
 #     print(bin_number)
 
-# def bin_to_hexa(init_number):
+# def dec_to_hexa(init_number):
 #     hexa_number = ""
 #     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
 #         number_conversion = init_number % 16
