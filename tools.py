@@ -24,6 +24,7 @@ def int_convert_try(the_number):
     except ValueError:
         return False
     
+
 def hexa_base_convert_try(the_experimented_number):
         try :
             the_experimented_number_int  = int(the_experimented_number, 16)
@@ -31,12 +32,10 @@ def hexa_base_convert_try(the_experimented_number):
         except ValueError:
             return False
 
-# def init_number_is_a_number():
-#     init_number_entry_is_not_a_number = False
 
 
 def ask_for_init_base ():
-    init_base_entry = input ("Entrez la base d'origine du votre nombre : ")
+    init_base_entry = input (ask_for_init_base_text)
     if check_base (init_base_entry):
         return 
     else:
@@ -52,6 +51,7 @@ def check_base (get_init_base_entry):
 def convert_b2b (init_number, init_base, target_base):
     target_number = 0
     return target_number
+
 
 def execute_convertion ():
     init_number = ask_for_init_number ()
@@ -71,7 +71,7 @@ def dec_to_bin(init_number):#le init_number doit etre un int
     
 
 def ask_for_target_base ():
-    target_base_entry = input ("Entrez la base finale pour votre nombre")
+    target_base_entry = input (ask_for_target_base_text)
     if check_base (target_base_entry):
         return target_base_entry
     else:

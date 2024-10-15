@@ -8,6 +8,7 @@ Error_number_entry = "Ceci n'est pas un nombre entier valide. Veuillez réessaye
 
 text_error_base_entry = "La base séléctionnée n'est pas supportée. Veuillez choisir une base de 2, 10 ou 16"
 text_valid_base = "Base valide. Veuillez patienter"
+ask_for_init_base_text = "Entrez la base d'origine du votre nombre : "
 
 init_base_entry_is_a_base = True
 
@@ -20,4 +21,4 @@ base_list = [binary_list, hexa_list, decimal_list]
 
 
 target_base_entry_is_a_base = True
-
+ask_for_target_base_text = "Entrez la base finale de votre nombre : "
