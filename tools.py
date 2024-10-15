@@ -62,6 +62,11 @@ def hexa_base_convert_try(the_experimented_number):
 
 
 
+def convert_b2b (init_number, init_base, target_base):
+    target_number = 0
+    return target_number
+
+
 def dec_to_bin(init_number):#le init_number doit etre un int
     bin_number = ""
     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
@@ -83,9 +88,6 @@ def execute_convertion ():
       convert_b2b (init_number, init_base, target_base)
     
 
-def convert_b2b (init_number, init_base, target_base):
-    target_number = 0
-    return target_number
 
 
 
