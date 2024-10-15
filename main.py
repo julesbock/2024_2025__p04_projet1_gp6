@@ -3,7 +3,6 @@ from tools import *
 
 
 def run_main():
-    print(2)
     execute_convertion()
 
 
