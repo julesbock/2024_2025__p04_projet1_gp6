@@ -37,9 +37,7 @@ def ask_for_target_base ():
 
 
 
-def convert_b2b (init_number, init_base, target_base):
-    target_number = 0
-    return target_number
+
 
 def is_valid(number):
     
@@ -85,7 +83,9 @@ def execute_convertion ():
       convert_b2b (init_number, init_base, target_base)
     
 
-
+def convert_b2b (init_number, init_base, target_base):
+    target_number = 0
+    return target_number
 
 
 
