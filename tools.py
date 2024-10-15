@@ -4,12 +4,39 @@ def ask_for_init_number ():
     while init_number_entry_is_not_a_number:
         init_number_entry = input(ask_for_init_number_text)
         if is_valid(init_number_entry):
-        if int_convert_try(init_number_entry) or hexa_base_convert_try(init_number_entry):
             # init_number_is_a_number()
             return init_number_entry
 
         else :
             print(Error_number_entry)
+
+
+def check_base (get_init_base_entry):
+    for base in base_list :
+        if get_init_base_entry in base:
+            return True
+    return False
+
+
+def ask_for_init_base ():
+    init_base_entry = input (ask_for_init_base_text)
+    if check_base (init_base_entry):
+        return 
+    else:
+        print (text_error_base_entry)
+        ask_for_init_base ()
+
+
+def ask_for_target_base ():
+    target_base_entry = input (ask_for_target_base_text)
+    if check_base (target_base_entry):
+        return target_base_entry
+    else:
+        print (text_error_base_entry)
+        ask_for_target_base ()
+
+
+
 
 
 def is_valid(number):
@@ -34,32 +61,11 @@ def hexa_base_convert_try(the_experimented_number):
 
 
 
-def ask_for_init_base ():
-    init_base_entry = input (ask_for_init_base_text)
-    if check_base (init_base_entry):
-        return 
-    else:
-        print (text_error_base_entry)
-        ask_for_init_base ()
-
-def check_base (get_init_base_entry):
-    for base in base_list :
-        if get_init_base_entry in base:
-            return True
-    return False
 
 def convert_b2b (init_number, init_base, target_base):
     target_number = 0
     return target_number
 
-
-def execute_convertion ():
-    init_number = ask_for_init_number ()
-    init_base = ask_for_init_base ()
-    target_base = ask_for_target_base ()
-    target_number = \
-      convert_b2b (init_number, init_base, target_base)
-    
 
 def dec_to_bin(init_number):#le init_number doit etre un int
     bin_number = ""
@@ -70,13 +76,20 @@ def dec_to_bin(init_number):#le init_number doit etre un int
     print(bin_number)
     
 
-def ask_for_target_base ():
-    target_base_entry = input (ask_for_target_base_text)
-    if check_base (target_base_entry):
-        return target_base_entry
-    else:
-        print (text_error_base_entry)
-        ask_for_target_base ()
+
+
+
+
+def execute_convertion ():
+    init_number = ask_for_init_number ()
+    init_base = ask_for_init_base ()
+    target_base = ask_for_target_base ()
+    target_number = \
+      convert_b2b (init_number, init_base, target_base)
+    
+
+
+
 
 
 
