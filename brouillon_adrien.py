@@ -82,6 +82,15 @@
 #         init_number //= 2
 #     print(bin_number)
 # 
-# 
+def bin_to_dec():
+    init_number = int(input("hi : "))
+    dec_number = ""
+    init_number_size = len(init_number)
+    for i in range(init_number_size):
+        dec_number += init_number[i]*(init_number_size-i)
+    return dec_number
+
+print(bin_to_dec())
+
 # 
 # 
