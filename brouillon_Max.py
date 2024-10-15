@@ -6,20 +6,25 @@ from tools import *
 
 
 def dec_to_bin(init_number):#le init_number doit etre un int
+    if init_number is not int:      # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
+        raise ValueError ("Le nomnre doit être un entier")
+    if init_number < 0:
+        raise ValueError ("Le nombre est négatif, il doit être positif")
+    if init_number == 0:
+        return "0"
     bin_number = ""
-    while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
+    while init_number > 0:
         number_conversion = init_number % 2
         bin_number = str(number_conversion) + bin_number
         init_number //= 2
-        
-            # a = a ** 2 => a **= 2
-
-def hex_to_bin(hex_number):
+    return bin_number
+ 
+def hex_to_bin(init_number):
     bin_number = ""
-    while hex_number > 0:
-        number_conversion = hex_number % 16
+    while init_number > 0:
+        number_conversion = init_number % 16
         bin_number = str(number_conversion) + bin_number
-        hex_number //= 16
+        init_number//= 16
 
 # petit test cpdt il y a sûrement une erreur car je n'arrive pas à intégrer les lettres, tu peux essayer de le faire Adrien. 
 
