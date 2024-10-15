@@ -12,3 +12,4 @@ def dec_to_bin(init_number):#le init_number doit etre un int
         init_number //= 2
         
             # a = a ** 2 => a **= 2
+
