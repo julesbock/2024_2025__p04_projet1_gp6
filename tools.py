@@ -67,6 +67,15 @@ def convert_b2b (init_number, init_base, target_base):
     return target_number
 
 
+def convert_if_b_is_b (init_number, init_base, target_base):
+    target_number = 0
+    if init_base == target_base:
+        target_number = init_number
+        return target_number
+    else:
+        pass
+
+
 def dec_to_bin(init_number):#le init_number doit etre un int
     bin_number = ""
     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
