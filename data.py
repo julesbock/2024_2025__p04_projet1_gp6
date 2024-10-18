@@ -22,3 +22,5 @@ base_list = [binary_list, hexa_list, decimal_list]
 
 target_base_entry_is_a_base = True
 ask_for_target_base_text = "Entrez la base finale de votre nombre : "
+
+hex_list="0123456789abcdef"
