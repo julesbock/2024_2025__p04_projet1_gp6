@@ -34,3 +34,6 @@ init_number = "1ABDE369"
 target_number = hex_to_dec(init_number)
 # print(f"La valeur décimale de {init_number} est {decimal_value}.")
 # seulement pour les tests de la fct
+
+def ask_for_restart ():
+    answer = input("Voulez ")
