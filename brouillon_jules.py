@@ -1,11 +1,18 @@
 from data import *
-from tools import *
+from main_tools import *
 
-def convert_if_b_is_b (init_number, init_base, target_base):
-    target_number = 0
-    if init_base == target_base:
-        target_number = init_number
-        return target_number
-    else:
-        pass
 
+def dec_to_hex (init_number):
+    target_number = ""
+    if init_number == 0:
+        return "0"
+    
+    while init_number > 0:
+        remainder = init_number % 16
+        target_number = hex_list [remainder] + target_number
+        init_number = init_number // 16
+    
+    return target_number
+
+
+print(dec_to_hex (1000))
