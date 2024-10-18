@@ -27,3 +27,9 @@ ask_for_target_base_text = "Entrez la base finale de votre nombre : "
 # Data fonctions de conversion
 
 hex_list = "0123456789ABCDEF"
+
+
+base_data_dictionnary = {
+    ("2", "16") : bin_to_hex();
+    
+}
