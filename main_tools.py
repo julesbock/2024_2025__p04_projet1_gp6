@@ -1,4 +1,35 @@
 from data import *
+from side_tools import * 
+
+base_data_dictionnary = {
+    ("2", "16") : bin_to_hex();
+    
+
+
+}
+
+def bin_to_hex(init_number):
+    hex_number = bin_to_dec(init_number)
+    target_number = dec_to_hex(hex_number)
+    return target_number
+
+def hex_to_bin(init_number):
+    hex_number = hex_to_dec(init_number)
+    target_number = dec_to_bin(hex_number)
+    return target_number
+
+def execute_convertion ():
+
+    init_number = ask_for_init_number ()
+    init_base = ask_for_init_base ()
+    target_base = ask_for_target_base ()
+    target_number = \
+      convert_b2b (init_number, init_base, target_base)
+    
+def convert_b2b (init_number, init_base, target_base):
+    target_number = 0
+
+    return target_number
 
 def ask_for_init_number ():
     while init_number_entry_is_not_a_number:
@@ -11,17 +42,10 @@ def ask_for_init_number ():
             print(Error_number_entry)
 
 
-def check_base (get_init_base_entry):
-    for base in base_list :
-        if get_init_base_entry in base:
-            return True
-    return False
-
-
 def ask_for_init_base ():
     init_base_entry = input (ask_for_init_base_text)
     if check_base (init_base_entry):
-        return 
+        return init_base_entry
     else:
         print (text_error_base_entry)
         ask_for_init_base ()
@@ -33,15 +57,15 @@ def ask_for_target_base ():
         return target_base_entry
     else:
         print (text_error_base_entry)
-        ask_for_target_base ()
+        ask_for_target_base ()        
 
 
 
 
 
-def is_valid(number):
-    
-    return int_convert_try(number) or hexa_base_convert_try(number)
+
+
+
 
 
 def int_convert_try(the_number):
@@ -62,9 +86,7 @@ def hexa_base_convert_try(the_experimented_number):
 
 
 
-def convert_b2b (init_number, init_base, target_base):
-    target_number = 0
-    return target_number
+
 
 
 def convert_if_b_is_b (init_number, init_base, target_base):
@@ -76,6 +98,16 @@ def convert_if_b_is_b (init_number, init_base, target_base):
         pass
 
 
+def execute_convertion ():
+    # init_number = ask_for_init_number ()
+    # init_base = ask_for_init_base ()
+    # target_base = ask_for_target_base ()
+    # target_number = \
+    #   convert_b2b (init_number, init_base, target_base)
+    
+
+
+
 def dec_to_bin(init_number):#le init_number doit etre un int
     bin_number = ""
     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
@@ -84,23 +116,6 @@ def dec_to_bin(init_number):#le init_number doit etre un int
         init_number //= 2
     print(bin_number)
     
-
-
-
-
-
-def execute_convertion ():
-    init_number = ask_for_init_number ()
-    init_base = ask_for_init_base ()
-    target_base = ask_for_target_base ()
-    target_number = \
-      convert_b2b (init_number, init_base, target_base)
-    
-
-def give_result ():
-    pass
-
-
 
 
 def bin_to_dec(init_number):

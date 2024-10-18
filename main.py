@@ -1,5 +1,5 @@
 from data import *
-from tools import *
+from main_tools import *
 
 
 def run_main():
