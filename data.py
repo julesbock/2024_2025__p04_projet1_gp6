@@ -24,8 +24,14 @@ target_base_entry_is_a_base = True
 ask_for_target_base_text = "Entrez la base finale de votre nombre : "
 
 
-# Data fonctions de conversion
+# Data caractères hexadécimaux
 
 hex_list = "0123456789ABCDEF"
 
+# Data main fonctions
+target_number = 0 # pas sur de ca, c'etait pour eviter une erreur a verifier avec la fonction get result
+thank_you_text = "Merci d'avoir utilisé notre outil de conversion."
+restart_text = "Souhaitez vous convertir un autre nombre ?"
+goodbye_text = thank_you_text + "A bientot !"
+input_error_text = "Veuillez répondre par oui ou par non"
 
