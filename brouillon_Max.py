@@ -22,15 +22,15 @@ from tools import *
 
 def hex_to_dec (init_number):
     hex_list
-    decimal_number = 0
+    target_number = 0
     for i in range(len(init_number)):
         list_result = hex_list[-(i+1)].lower()
-        decimal_number += hex_list.index(list_result) * (16**i)
-    return decimal_number
+        target_number += hex_list.index(list_result) * (16**i)
+    return target_number
 
 
 
 init_number = "1ABDE369"
-decimal_value = hex_to_dec(init_number)
+target_number = hex_to_dec(init_number)
 # print(f"La valeur décimale de {init_number} est {decimal_value}.")
 # seulement pour les tests de la fct
