@@ -24,3 +24,22 @@ def hexa_base_convert_try(the_experimented_number):
             return True
         except ValueError:
             return False
+
+
+def answer_is_yes(answer):
+    return answer == "oui"
+
+def answer_is_no(answer):
+    return answer == "non"
+
+
+def second_check_is_(init_number, init_base):
+    return is_authorized(str(init_number), init_base)
+
+def is_authorized(number, base):
+    is_in = True
+    for char in number :
+        maybe_is_in = char in authorized_base_character_dic.get(base)
+        is_in = is_in and maybe_is_in
+    return is_in
+    

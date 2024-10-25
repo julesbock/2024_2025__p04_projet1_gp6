@@ -8,23 +8,25 @@ from tools_side import *
 
 def dec_to_hex (init_number):
     target_number = ""
+    init_number = int(init_number)
     if init_number == 0:
         return "0"
     
     while init_number > 0:
         remainder = init_number % 16
-        target_number = hex_list [remainder] + target_number
+        target_number = hex_character_list [remainder] + target_number
         init_number = init_number // 16
     
     return target_number
 
 def dec_to_bin(init_number):#le init_number doit etre un int
     bin_number = ""
+    init_number = int(init_number)
     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
         number_conversion = init_number % 2
         bin_number = str(number_conversion) + bin_number
         init_number //= 2
-    print(bin_number)
+    return bin_number
 
 
 def bin_to_hex(init_number):
@@ -34,6 +36,7 @@ def bin_to_hex(init_number):
 
 def bin_to_dec(init_number):
     dec_number = 0
+    sign = ""
 
     if init_number[0] == "-" :
         init_number = init_number.replace("-", "0") 
@@ -53,24 +56,23 @@ def hex_to_bin(init_number):
     return target_number
 
 def hex_to_dec (init_number):
-    hex_list
     target_number = 0
-    for i in range(len(init_number)):
-        list_result = hex_list[-(i+1)].lower()
-        target_number += hex_list.index(list_result) * (16**i)
+    init_number = str(init_number).upper()
+    for digit in init_number:
+        reverse_pos_digit = len(init_number) - init_number.index(digit) - 1
+        target_number += hex_character_list.index(digit) * (16**reverse_pos_digit)
     return target_number 
 
 
 def convert_if_b_is_b (init_number, init_base, target_base):
     target_number = 0
     if init_base == target_base:
-        target_number = init_number
-        return target_number
+        return True
     else:
-        pass
+        return False
 
 
-base_data_dictionnary = {
+base_data_dictionnary_to_convert = {
 
     ("2", "10") : bin_to_dec,
     ("2", "16") : bin_to_hex,
@@ -115,7 +117,7 @@ def ask_for_target_base ():
 
 def convert_b2b (init_number, init_base, target_base):
 
-    fonction = base_data_dictionnary.get((init_base, target_base))
+    fonction = base_data_dictionnary_to_convert.get((init_base, target_base))
     if convert_if_b_is_b(init_number, init_base, target_base):
         return init_number
     else :
@@ -128,24 +130,20 @@ def convert_b2b (init_number, init_base, target_base):
 def execute_convertion ():
     init_number = ask_for_init_number ()
     init_base = ask_for_init_base ()
-    target_base = ask_for_target_base ()
-    target_number = \
-      convert_b2b (init_number, init_base, target_base)
-    give_result(init_number, init_base, target_base)
+    if second_check_is_(init_number, init_base):
+        target_base = ask_for_target_base ()
+        target_number = \
+        convert_b2b (init_number, init_base, target_base)
+        give_result(init_number, init_base, target_base, target_number)
+    else:
+        print(Error_between_base_and_number)
 
-def give_result ():
-    print (f"Le nombre converti est : {target_number}"
+def give_result (init_number, init_base, target_base, target_number):
+    
+    print (f"Vous avez demandé de changer le nombre {init_number} en base {init_base} vers la base {target_base}. "
+           + "\n"
+           f"Le résultat est : {target_number}"
            + "\n"
            + thank_you_text)
     
-def ask_for_restart ():
-    answer = input(restart_text).lower()
-    while True:
-        if answer == "oui":
-            execute_convertion ()
-        elif answer == "non":
-            print(goodbye_text)
-        else:
-            print(input_error_text)
-
 
