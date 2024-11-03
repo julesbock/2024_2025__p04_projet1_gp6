@@ -3,7 +3,7 @@ from tools_main import *
 
 
 def run_main():
-    execute_convertion()
+    execute_convertion_and_give_result()
     ask_for_restart ()
  
 def ask_for_restart ():

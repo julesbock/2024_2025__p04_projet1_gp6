@@ -30,7 +30,7 @@ Explication de notre projet:
 I  main.py
 
 Nous avons d'abord décidé que le programme principal serait simplement stocké dans le fichier main.py. 
-La fonction principale du programme run_main y est lancé. Cette fonction use deux autres focntions (execute_conversion et ask_for_restart) respectivement définies dans les fichier tools_main.py et main.py.
+La fonction principale du programme run_main y est lancé. Cette fonction use deux autres focntions (execute_convertion_and_give_result et ask_for_restart) respectivement définies dans les fichier tools_main.py et main.py.
 
 La fonction ask_for_restart redemande à l'utilisateur s'il veut réutiliser la fonction principale. Lorsque la réponse est positive, la fonction run_main est relancée tandis que si la réponse est négative, le porgrammme est arrêté. 
 
@@ -41,7 +41,7 @@ Ces mêmes fonctions importent des variables provenant de data.py, principalemen
 De plus, un dictionnaire est présent dans la fonction. Il assigne à chaque fonction de conversion, les bases d'origine et finale, qui y correspondent. 
 
 De surcroît, tools_main contient de même de nombreuses fonctions d'exécution du programme. Les fonctions secondaires de demande du nombre, de la base d'origine et de la base finale utilisent elles aussi des variables présentes dans data.py. 
-Enfin, les fonctions principales de notre projet (execute_convertion et give_result) sont présentes dans ce même fichier et sont initiées avant d'être utilisées par la fonction run_main évoquée précédemment. 
+Enfin, les fonctions principales de notre projet (execute_convertion_and_give_result et give_result) sont présentes dans ce même fichier et sont initiées avant d'être utilisées par la fonction run_main évoquée précédemment. 
 
 III tools_side.py
 

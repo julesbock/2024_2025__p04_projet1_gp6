@@ -9,7 +9,7 @@ from tools_side import *
 def dec_to_hex (init_number):
     target_number = ""
     init_number = int(init_number)
-    
+
     while init_number > 0:
         remainder = init_number % 16
         target_number = hex_character_list [remainder] + target_number
@@ -125,7 +125,7 @@ def init_number_is_0 (init_number):
 
 # Main fonctions
 
-def execute_convertion ():
+def execute_convertion_and_give_result ():
     init_number = ask_for_init_number ()
     init_base = ask_for_init_base ()
     if second_check_is_ok(init_number, init_base):
