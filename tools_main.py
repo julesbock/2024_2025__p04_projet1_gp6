@@ -51,9 +51,8 @@ def hex_to_bin(init_number):
 def hex_to_dec (init_number):
     target_number = 0
     init_number = str(init_number).upper()
-    for digit in init_number:
-        reverse_pos_digit = len(init_number) - init_number.index(digit) - 1
-        target_number += hex_character_list.index(digit) * (16**reverse_pos_digit)
+    for i, digit in enumerate(reversed(init_number)):  # On utilise enumerate pour avoir l'index exact
+        target_number += hex_character_list.index(digit) * (16 ** i)
     return target_number 
 
 
@@ -83,6 +82,7 @@ base_data_dictionnary_to_convert = {
 
 def ask_for_init_number ():
     global sign 
+    sign = ""
     while init_number_entry_is_not_a_number:
         init_number_entry = input(ask_for_init_number_text)
         if is_valid(init_number_entry):
@@ -117,7 +117,7 @@ def convert_b2b (init_number, init_base, target_base):
     if convert_if_b_is_b(init_number, init_base, target_base):
         return sign + str(init_number)
     else :
-        return sign + fonction(init_number)
+        return sign + str(fonction(init_number))
 
 def init_number_is_0 (init_number):
     return str(init_number) == "0"
@@ -141,7 +141,7 @@ def execute_convertion_and_give_result ():
 
 def give_result (init_number, init_base, target_base, target_number):
     
-    print (f"Vous avez demandé de changer le nombre {init_number} en base {init_base} vers la base {target_base}. "
+    print (f"Vous avez demandé de changer le nombre {sign + str(init_number)} en base {init_base} vers la base {target_base}. "
            + "\n"
            f"Le résultat est : {target_number}"
            + "\n"
