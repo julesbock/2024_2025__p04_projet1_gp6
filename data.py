@@ -34,7 +34,7 @@ hex_character_list = "0123456789ABCDEF"
 target_number = 0 # pas sur de ca, c'etait pour eviter une erreur a verifier avec la fonction get result
 thank_you_text = "Merci d'avoir utilisé notre outil de conversion. "
 restart_text = "Souhaitez vous convertir un autre nombre ? "
-goodbye_text = thank_you_text + "A bientot !"
+goodbye_text = thank_you_text + "A bientôt !"
 input_error_text = "Veuillez répondre par oui ou par non "
 
 
@@ -46,4 +46,7 @@ authorized_base_character_dic = {
     "10" : dec_character_list,
     "16" : hex_character_list
 }
+
+sign ="" 
+
 Error_between_base_and_number = "Sorry, your number is not in the base you gave us"

@@ -33,7 +33,7 @@ def answer_is_no(answer):
     return answer == "non"
 
 
-def second_check_is_(init_number, init_base):
+def second_check_is_ok(init_number, init_base):
     return is_authorized(str(init_number), init_base)
 
 def is_authorized(number, base):

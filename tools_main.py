@@ -9,8 +9,6 @@ from tools_side import *
 def dec_to_hex (init_number):
     target_number = ""
     init_number = int(init_number)
-    if init_number == 0:
-        return "0"
     
     while init_number > 0:
         remainder = init_number % 16
@@ -36,18 +34,13 @@ def bin_to_hex(init_number):
 
 def bin_to_dec(init_number):
     dec_number = 0
-    sign = ""
-
-    if init_number[0] == "-" :
-        init_number = init_number.replace("-", "0") 
-        sign = "-"
     
     init_number_size = len(init_number)
     
     for i in range(init_number_size):
         dec_number += int(init_number[i]) * (2 ** (init_number_size - i - 1))
     
-    return sign + str(dec_number)
+    return dec_number
 
 
 def hex_to_bin(init_number):
@@ -89,11 +82,15 @@ base_data_dictionnary_to_convert = {
 # Fonctions d'execution
 
 def ask_for_init_number ():
+    global sign 
     while init_number_entry_is_not_a_number:
         init_number_entry = input(ask_for_init_number_text)
         if is_valid(init_number_entry):
-            # init_number_is_a_number()
-            return init_number_entry
+            init_number = str(init_number_entry)
+            if init_number[0] == "-" :
+                init_number = init_number.replace("-", "") 
+                sign = "-"
+            return init_number
 
         else :
             print(Error_number_entry)
@@ -116,13 +113,14 @@ def ask_for_target_base ():
 
 
 def convert_b2b (init_number, init_base, target_base):
-
     fonction = base_data_dictionnary_to_convert.get((init_base, target_base))
     if convert_if_b_is_b(init_number, init_base, target_base):
-        return init_number
+        return sign + str(init_number)
     else :
-        return fonction(init_number)
+        return sign + fonction(init_number)
 
+def init_number_is_0 (init_number):
+    return str(init_number) == "0"
 
 
 # Main fonctions
@@ -130,10 +128,13 @@ def convert_b2b (init_number, init_base, target_base):
 def execute_convertion ():
     init_number = ask_for_init_number ()
     init_base = ask_for_init_base ()
-    if second_check_is_(init_number, init_base):
+    if second_check_is_ok(init_number, init_base):
         target_base = ask_for_target_base ()
-        target_number = \
-        convert_b2b (init_number, init_base, target_base)
+        if init_number_is_0(init_number):
+            target_number = "0"
+        else : 
+            target_number = \
+            convert_b2b (init_number, init_base, target_base)
         give_result(init_number, init_base, target_base, target_number)
     else:
         print(Error_between_base_and_number)
