@@ -146,7 +146,7 @@ def execute_convertion_and_give_result ():
             convert_b2b (init_number, init_base, target_base)
         give_result(init_number, init_base, target_base, target_number)
     else:
-        print(Error_between_base_and_number)
+        print(error_between_base_and_number_text)
 
 def give_result (init_number, init_base, target_base, target_number):
     
