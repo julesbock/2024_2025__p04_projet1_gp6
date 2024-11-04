@@ -3,6 +3,8 @@ Jules Bock
 Maxime Bourgain
 Adrien Baroux-Arbona
 
+# Présentation PPT : https://lndb92-my.sharepoint.com/:p:/g/personal/jul_bock_lndb_eu/EVLR637XVYtBpLN8QqtaxiABl4XP3RwcP-KqQsUkZCA94A?e=99pbA3
+
 Enoncé :
 
 SUJET : binaire, décimal, hexadécimal vers binaire, décimal, hexadécimal
