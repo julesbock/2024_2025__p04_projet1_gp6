@@ -1,8 +1,6 @@
 from data import *
 from tools_side import * 
 
-# on doit faire en sorte de check le nombre rentré et la base (si 224 et 2 ca marche) 
-# on doit aussi faire les valeurs négatives
 
 # Fonctions de conversion
 
@@ -17,11 +15,11 @@ def dec_to_hex (init_number):
     return target_number
 
 
-def dec_to_bin(init_number):#le init_number doit etre un int
+def dec_to_bin(init_number):
     bin_number = ""
     init_number = int(init_number)
 
-    while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
+    while init_number > 0: 
         number_conversion = init_number % 2
         bin_number = str(number_conversion) + bin_number
         init_number //= 2
@@ -101,9 +99,9 @@ def ask_for_init_number ():
 
 def ask_for_init_base ():
     init_base_entry = input (ask_for_init_base_text)
-
-    if check_base (init_base_entry):
-        return init_base_entry
+    valid_base = check_base (init_base_entry)
+    if valid_base:
+        return valid_base
     else:
         print (text_error_base_entry)
         ask_for_init_base ()
@@ -111,9 +109,9 @@ def ask_for_init_base ():
 
 def ask_for_target_base ():
     target_base_entry = input (ask_for_target_base_text)
-
-    if check_base (target_base_entry):
-        return target_base_entry
+    valid_base = check_base (target_base_entry)
+    if valid_base:
+        return valid_base
     else:
         print (text_error_base_entry)
         ask_for_target_base ()        
@@ -156,4 +154,5 @@ def give_result (init_number, init_base, target_base, target_number):
            + "\n"
            + thank_you_text)
     
+
 

@@ -5,6 +5,7 @@ def is_valid(number):
     return int_convert_try(number) or hexa_base_convert_try(number)
 
 def check_base (get_init_base_entry):
+    
     for base in base_list :
         if get_init_base_entry in base:
             return base[0]
@@ -34,9 +35,13 @@ def answer_is_no(answer):
 
 
 def second_check_is_ok(init_number, init_base):
-    return is_authorized(str(init_number).upper(), init_base)
+    return is_authorized(str(init_number).upper(), str(init_base))
 
 def is_authorized(number, base):
+
+    if authorized_base_character_dic.get(base) is None:
+        return False
+    
     is_in = True
     for char in number :
         maybe_is_in = char in authorized_base_character_dic.get(base)
