@@ -54,6 +54,6 @@ IV data.py
 Enfin, le fichier data.py contient la presque totalité des variables évoquées dans les différents fichiers constitiants du projet. Les variables des fonctions d'intéractions avec l'utilisateur mais aussi les listes des différentes bases utilisées. 
 
 
-PS:
+Post-Scritum:
 Nous tenons à préciser que nous avons choisi de travailler avec des brouillons personnels afin de ne pas créer de conflits dans les fichiers majeurs. Ces brouillons étaient respectivement nommés brouillon_adrien.py, brouillon_jules.py et brouillon_max.py. De plus, un fichier gitignore a été utilisé.
 
