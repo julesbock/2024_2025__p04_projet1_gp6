@@ -34,7 +34,7 @@ def answer_is_no(answer):
 
 
 def second_check_is_ok(init_number, init_base):
-    return is_authorized(str(init_number), init_base)
+    return is_authorized(str(init_number).upper(), init_base)
 
 def is_authorized(number, base):
     is_in = True

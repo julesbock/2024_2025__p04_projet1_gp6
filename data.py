@@ -49,4 +49,4 @@ authorized_base_character_dic = {
 
 sign ="" 
 
-Error_between_base_and_number = "Sorry, your number is not in the base you gave us"
+Error_between_base_and_number = "Désolé, le nombre et la base de celui-ci que nous vous avez donné ne sont pas compatibles"
