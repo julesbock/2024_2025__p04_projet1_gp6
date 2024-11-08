@@ -1,96 +1,58 @@
-# # tools
+2. Vérification de l'existence de la clé dans le dictionnaire de conversion base_data_dictionnary_to_convert
 
-# def ask_for_init_number ():
-#     while init_number_is_not_a_number:
-#         init_number_entry = input(ask_for_init_number_question)
-#         if int_convert_try(init_number_entry) or hexa_base_convert_try(init_number_entry):
+Dans la fonction convert_b2b, vous devez vous assurer que la clé (init_base, target_base) existe dans le dictionnaire avant d'essayer d'appeler la fonction associée.
 
-#             return init_number_entry
+Voici la version corrigée de convert_b2b :
 
-#         else :
-#             print(Error_number_entry)
-
-# def int_convert_try(the_number):
-#     try : 
-#         the_int_number = int(the_number)
-#         return True
-#     except ValueError:
-#         return False
+def convert_b2b(init_number, init_base, target_base):
+    fonction = base_data_dictionnary_to_convert.get((init_base, target_base))
     
-# def hexa_base_convert_try(the_experimented_number):
-#         try :
-#             the_experimented_number_int  = int(the_experimented_number, 16)
-#             return True
-#         except ValueError:
-#             return False
+    if not fonction:  # Vérifiez si la fonction existe dans le dictionnaire
+        print(f"Conversion non supportée pour la base {init_base} à {target_base}")
+        return None
+    
+    if convert_if_b_is_b(init_number, init_base, target_base):
+        return sign + str(init_number)
+    else:
+        return sign + str(fonction(init_number))
 
+3. Gestion de l'erreur de base dans check_base
 
+Actuellement, si la base n'est pas trouvée dans check_base, la fonction retourne False. Cela peut être problématique si vous ne gérez pas ce cas correctement.
 
+Voici une version améliorée de check_base qui gère mieux les erreurs et garantit que le programme continue à fonctionner correctement :
 
-# #data
-# init_number_is_not_a_number = True
-# ask_for_init_number_question = "Entrez un nombre entier : "
-# Error_number_entry = "Ceci n'est pas un nombre entier valide. Veuillez réessayer."
+def check_base(get_init_base_entry):
+    for base in base_list:
+        if get_init_base_entry in base:
+            return base[0]
+    return None  # Retourner None si aucune base valide n'est trouvée
 
+Ensuite, dans la fonction ask_for_init_base (et la fonction ask_for_target_base), vous devrez vérifier si le résultat est None et demander à l'utilisateur de saisir à nouveau la base si nécessaire.
+4. Validation dans convert_if_b_is_b
 
-# ask_for_init_number()
+La fonction convert_if_b_is_b semble vérifier si la base de départ et la base cible sont identiques. Si elles le sont, vous renvoyez directement le nombre sans modification. Ce comportement est correct, mais vous devez vérifier si la conversion est vraiment nécessaire avant d'appeler cette fonction. Elle doit aussi prendre en charge la logique où la conversion n'est pas nécessaire et où le nombre ne doit pas être modifié.
 
-# text_error_base_entry = "La base séléctionnée n'est pas supportée. Veuillez choisir une base de 2, 10 ou 16"
-# text_valid_base = "Base valide. Veuillez patienter"
-# binary_list = ["2", "bin", "binary", "binaire"]
-# hexa_list = ["16", "hexa", "hex", "hexadecimal", "hexadécimal"]
-# decimal_list = ["10", "dec", "decimal", "décimal"]
-# base_list = [binary_list, hexa_list, decimal_list]
-# init_base_entry_is_a_base = True
-# is_not_a_base = True
+Voici la version corrigée :
 
-# def check_base (get_init_base_entry):
-#     for base in base_list :
-#         if get_init_base_entry in base:
-#             return True
-#     return False
+def convert_if_b_is_b(init_number, init_base, target_base):
+    if init_base == target_base:
+        return True  # Si les bases sont identiques, aucune conversion nécessaire
+    return False  # Sinon, conversion nécessaire
 
-# def ask_for_init_base ():
-#     is_not_a_base = True
-#     while is_not_a_base:
-#         init_base_entry = input ("Entrez la base d'origine du votre nombre : ")
-#         if check_base (init_base_entry):
-#             is_not_a_base  = False
-#             return "2"
-#         else:
-#             print (text_error_base_entry)
+Amélioration générale de la structure du programme
 
+En dehors des problèmes de fonctionnement, il y a quelques améliorations possibles dans la structure du programme pour le rendre plus clair et maintenable :
 
+    Eviter la redondance dans les imports : Vous importez plusieurs fois des modules, y compris from data import *, qui est inutile si vous les importez déjà au début. Supprimez les lignes redondantes.
 
+    Clarifier le rôle des variables globales : Vous utilisez la variable sign globalement dans plusieurs fonctions. Bien qu'il soit correct de l'utiliser pour signaler les signes négatifs, il peut être judicieux de la rendre locale dans les fonctions pour éviter les effets de bord.
 
-# print(ask_for_init_base ())
+Résumé des changements à apporter
 
+    Corriger la récursivité dans ask_for_init_base et ask_for_target_base pour qu'elles retournent correctement la valeur de base après validation.
+    Vérifier l'existence de la clé dans le dictionnaire base_data_dictionnary_to_convert avant d'essayer de l'utiliser comme une fonction.
+    Gérer correctement les erreurs de base dans check_base en retournant None au lieu de False si aucune base n'est trouvée.
+    Éviter les appels redondants d'importation.
 
-# def dec_to_bin(init_number):#le init_number doit etre un int
-#     bin_number = ""
-#     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
-#         number_conversion = init_number % 2
-#         bin_number = str(number_conversion) + bin_number
-#         init_number //= 2
-#     print(bin_number)
-
-# def dec_to_hexa(init_number):
-#     hexa_number = ""
-#     while init_number > 0: # faudra check les reponses imédiates : =0 et si le nombre n est pas négatif
-#         number_conversion = init_number % 16
-#         hexa_number = str(number_conversion) + hexa_number
-#         init_number //= 2
-#     print(bin_number)
-# 
-def bin_to_dec():
-    init_number = int(input("hi : "))
-    dec_number = ""
-    init_number_size = len(init_number)
-    for i in range(init_number_size):
-        dec_number += init_number[i]*(init_number_size-i)
-    return dec_number
-
-print(bin_to_dec())
-
-# 
-# 
+Avec ces ajustements, votre programme devrait être plus robuste et éviter l'erreur 'NoneType' object is not callable. N'hésitez pas à revenir vers moi si vous avez besoin de plus d'aide sur une partie spécifique !

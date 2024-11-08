@@ -47,4 +47,6 @@ def is_authorized(number, base):
         maybe_is_in = char in authorized_base_character_dic.get(base)
         is_in = is_in and maybe_is_in
     return is_in
-    
+
+def init_number_is_0 (init_number):
+    return str(init_number) == "0"

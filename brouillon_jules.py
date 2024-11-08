@@ -1,5 +1,6 @@
 from data import *
-from tools_main import *
+from .tools import *
+from main import *
 
 
 def dec_to_hex (init_number):
@@ -9,7 +10,7 @@ def dec_to_hex (init_number):
     
     while init_number > 0:
         remainder = init_number % 16
-        target_number = hex_list [remainder] + target_number
+        target_number = hexa_list [remainder] + target_number
         init_number = init_number // 16
     
     return target_number
