@@ -36,7 +36,10 @@ thank_you_text = "Merci d'avoir utilisé notre outil de conversion. "
 restart_text = "Souhaitez vous convertir un autre nombre ? "
 goodbye_text = thank_you_text + "A bientôt !"
 input_error_text = 'Veuillez répondre par "oui" ou par "non", sans espace'
-error_between_base_and_number_text = "Désolé, le nombre et la base de celui-ci que nous vous avez donné ne sont pas compatibles"
+error_between_base_and_number_text = \
+    "Désolé, le nombre et la base de celui-ci que nous vous avez donné ne sont pas compatibles (peut-être avez-vous mis un caractere superflu, espace ou autre)"
+
+
 
 
 
