@@ -17,19 +17,21 @@ def ask_for_init_number ():
 
 
 def ask_for_init_base ():
-    init_base_entry = input (ask_for_init_base_text)
-    valid_base = check_base (init_base_entry)
-    if valid_base:
-        return valid_base
-    else:
-        print (text_error_base_entry)
-        ask_for_init_base ()
+    while True :
+        init_base_entry = input (ask_for_init_base_text)
+        valid_base = check_base (init_base_entry)
+        if valid_base:
+            return valid_base
+        else:
+            print (text_error_base_entry)
+        # return ask_for_init_base ()
 
 def ask_for_target_base ():
-    target_base_entry = input (ask_for_target_base_text)
-    valid_base = check_base (target_base_entry)
-    if valid_base:
-        return valid_base
-    else:
-        print (text_error_base_entry)
-        ask_for_target_base ()       
+    while True :
+        target_base_entry = input (ask_for_target_base_text)
+        valid_base = check_base (target_base_entry)
+        if valid_base:
+            return valid_base
+        else:
+            print (text_error_base_entry)
+        # return ask_for_target_base ()       

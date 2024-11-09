@@ -31,7 +31,7 @@ dec_character_list = "0123456789"
 hex_character_list = "0123456789ABCDEF"
 
 # Data main fonctions
-target_number = 0 # pas sur de ca, c'etait pour eviter une erreur a verifier avec la fonction get result
+target_number = 0 
 thank_you_text = "Merci d'avoir utilisé notre outil de conversion. "
 restart_text = "Souhaitez vous convertir un autre nombre ? "
 goodbye_text = thank_you_text + "A bientôt !"
