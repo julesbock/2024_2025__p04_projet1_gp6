@@ -73,9 +73,9 @@ Nous tenons à préciser que nous avons choisi de travailler avec des brouillons
 
 
 
-Ce fichier contient la majorité des fonctions du projet. En effet, tous les fonctions de conversion des différentes bases y sont présentes. 
+<!-- Ce fichier contient la majorité des fonctions du projet. En effet, tous les fonctions de conversion des différentes bases y sont présentes. 
 Ces mêmes fonctions importent des variables provenant de data.py, principalement des chaînes de caractères ou des listes. 
 De plus, un dictionnaire est présent dans la fonction. Il assigne à chaque fonction de conversion, les bases d'origine et finale, qui y correspondent. 
 
 De surcroît, tools_main contient de même de nombreuses fonctions d'exécution du programme. Les fonctions secondaires de demande du nombre, de la base d'origine et de la base finale utilisent elles aussi des variables présentes dans data.py. 
-Enfin, les fonctions principales de notre projet (execute_convertion_and_give_result et give_result) sont présentes dans ce même fichier et sont initiées avant d'être utilisées par la fonction run_main évoquée précédemment. 
+Enfin, les fonctions principales de notre projet (execute_convertion_and_give_result et give_result) sont présentes dans ce même fichier et sont initiées avant d'être utilisées par la fonction run_main évoquée précédemment.  -->
