@@ -9,7 +9,6 @@ def dec_to_hex (init_number):
         init_number = init_number // 16
     return target_number
 
-
 def dec_to_bin (init_number):
     bin_number = ""
     init_number = int(init_number)
@@ -19,12 +18,10 @@ def dec_to_bin (init_number):
         init_number //= 2
     return bin_number
 
-
 def bin_to_hex (init_number):
     hex_number = bin_to_dec(init_number)
     target_number = dec_to_hex(hex_number)
     return target_number
-
 
 def bin_to_dec (init_number):
     dec_number = 0
@@ -33,20 +30,17 @@ def bin_to_dec (init_number):
         dec_number += int(init_number[i]) * (2 ** (init_number_size - i - 1))
     return dec_number
 
-
 def hex_to_bin (init_number):
     hex_number = hex_to_dec(init_number)
     target_number = dec_to_bin(hex_number)
     return target_number
 
-
 def hex_to_dec (init_number):
     target_number = 0
     init_number = str(init_number).upper()
-    for i, digit in enumerate(reversed(init_number)):  # On utilise enumerate pour avoir l'index exact
+    for i, digit in enumerate(reversed(init_number)):
         target_number += hex_character_list.index(digit) * (16 ** i)
     return target_number 
-
 
 def convert_if_b_is_b (init_number, init_base, target_base):
     target_number = 0
@@ -61,8 +55,6 @@ def convert_b2b (init_number, init_base, target_base):
         return sign + str(init_number)
     else :
         return sign + str(fonction(init_number))
-
-
 
 base_data_dictionnary_to_convert = {
 

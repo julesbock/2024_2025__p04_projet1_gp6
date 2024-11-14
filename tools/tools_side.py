@@ -1,11 +1,9 @@
 from data import * 
 
 def is_valid(number):
-    
     return int_convert_try(number) or hexa_base_convert_try(number)
 
 def check_base (get_init_base_entry):
-
     for base in base_list :
         if get_init_base_entry in base:
             return base[0]
@@ -17,7 +15,6 @@ def int_convert_try(the_number):
         return True
     except ValueError:
         return False
-    
 
 def hexa_base_convert_try(the_experimented_number):
         try :
@@ -26,13 +23,11 @@ def hexa_base_convert_try(the_experimented_number):
         except ValueError:
             return False
 
-
 def answer_is_yes(answer):
     return answer == "oui"
 
 def answer_is_no(answer):
     return answer == "non"
-
 
 def second_check_is_ok(init_number, init_base):
     return is_authorized(str(init_number).upper(), str(init_base))
