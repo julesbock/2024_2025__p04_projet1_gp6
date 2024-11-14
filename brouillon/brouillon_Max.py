@@ -21,11 +21,11 @@ from tools import *
  
 
 def hex_to_dec (init_number):
-    hex_list
+    hexa_list
     target_number = 0
     for i in range(len(init_number)):
-        list_result = hex_list[-(i+1)].lower()
-        target_number += hex_list.index(list_result) * (16**i)
+        list_result = hexa_list[-(i+1)].lower()
+        target_number += hexa_list.index(list_result) * (16**i)
     return target_number
 
 

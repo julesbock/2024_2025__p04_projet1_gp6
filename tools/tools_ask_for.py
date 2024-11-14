@@ -15,7 +15,6 @@ def ask_for_init_number ():
         else :
             print(Error_number_entry)
 
-
 def ask_for_init_base ():
     while True :
         init_base_entry = input (ask_for_init_base_text)
@@ -24,7 +23,6 @@ def ask_for_init_base ():
             return valid_base
         else:
             print (text_error_base_entry)
-        # return ask_for_init_base ()
 
 def ask_for_target_base ():
     while True :
@@ -33,5 +31,4 @@ def ask_for_target_base ():
         if valid_base:
             return valid_base
         else:
-            print (text_error_base_entry)
-        # return ask_for_target_base ()       
+            print (text_error_base_entry)   

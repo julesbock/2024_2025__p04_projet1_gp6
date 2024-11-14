@@ -1,5 +1,5 @@
 from data import *
-from .tools import *
+from ..tools import *
 from main import *
 
 
@@ -30,7 +30,7 @@ def ask_for_restart ():
     answer = input(restart_text).lower()
     while True:
         if answer == "oui":
-            execute_convertion ()
+            execute_convertion_and_give_result()
         elif answer == "non":
             print(goodbye_text)
         else:
