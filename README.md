@@ -57,7 +57,7 @@ Ce fichier stocke les différentes fonctions qui permettent de convertir le nomb
        d. tools_side.py
 
 Ce fichier contient les fonctions qui permettent la vérification de la validité des bases et nombres entrés par l'utilisateur de notre programme.
-Par ailleurs, la variable answer y est définie, pour son usage par la fonction ask_for_restart.
+Par ailleurs, la variable answer y est définie, pour son usage par la fonction ask_for_restart, qui se situe dans le fichier principal
 
 
 IV data.py
