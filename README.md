@@ -3,8 +3,6 @@ Jules Bock
 Maxime Bourgain
 Adrien Baroux-Arbona
 
-# Présentation PPT : https://lndb92-my.sharepoint.com/:p:/g/personal/jul_bock_lndb_eu/EVLR637XVYtBpLN8QqtaxiABl4XP3RwcP-KqQsUkZCA94A?e=T2FI9X
-
 Enoncé :
 
 SUJET : binaire, décimal, hexadécimal vers binaire, décimal, hexadécimal
@@ -67,15 +65,3 @@ Enfin, le fichier data.py contient la presque totalité des variables évoquées
 
 Post-Scritum:
 Nous tenons à préciser que nous avons choisi de travailler avec des brouillons personnels afin de ne pas créer de conflits dans les fichiers majeurs. Ces brouillons étaient respectivement nommés brouillon_adrien.py, brouillon_jules.py et brouillon_max.py. De plus, un fichier gitignore a été utilisé.
-
-
-
-
-
-
-<!-- Ce fichier contient la majorité des fonctions du projet. En effet, tous les fonctions de conversion des différentes bases y sont présentes. 
-Ces mêmes fonctions importent des variables provenant de data.py, principalement des chaînes de caractères ou des listes. 
-De plus, un dictionnaire est présent dans la fonction. Il assigne à chaque fonction de conversion, les bases d'origine et finale, qui y correspondent. 
-
-De surcroît, tools_main contient de même de nombreuses fonctions d'exécution du programme. Les fonctions secondaires de demande du nombre, de la base d'origine et de la base finale utilisent elles aussi des variables présentes dans data.py. 
-Enfin, les fonctions principales de notre projet (execute_convertion_and_give_result et give_result) sont présentes dans ce même fichier et sont initiées avant d'être utilisées par la fonction run_main évoquée précédemment.  -->
