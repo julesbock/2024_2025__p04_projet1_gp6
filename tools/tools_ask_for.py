@@ -2,15 +2,10 @@ from data import *
 from tools.tools_side import *
 
 def ask_for_init_number ():
-    global sign 
-    sign = ""
     while init_number_entry_is_not_a_number:
         init_number_entry = input(ask_for_init_number_text)
         if is_valid(init_number_entry):
             init_number = str(init_number_entry)
-            if init_number[0] == "-" :
-                init_number = init_number.replace("-", "") 
-                sign = "-"
             return init_number
         else :
             print(Error_number_entry)

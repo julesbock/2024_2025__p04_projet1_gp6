@@ -52,9 +52,9 @@ def convert_if_b_is_b (init_number, init_base, target_base):
 def convert_b2b (init_number, init_base, target_base):
     fonction = base_data_dictionnary_to_convert.get((init_base, target_base))
     if convert_if_b_is_b(init_number, init_base, target_base):
-        return sign + str(init_number)
+        return str(init_number)
     else :
-        return sign + str(fonction(init_number))
+        return str(fonction(init_number))
 
 base_data_dictionnary_to_convert = {
 

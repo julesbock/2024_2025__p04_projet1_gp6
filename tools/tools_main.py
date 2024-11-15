@@ -18,7 +18,7 @@ def execute_convertion_and_give_result ():
         print(error_between_base_and_number_text)
 
 def give_result (init_number, init_base, target_base, target_number):
-    print (f"Vous avez demandé de changer le nombre {sign + str(init_number)} en base {init_base} vers la base {target_base}. "
+    print (f"Vous avez demandé de changer le nombre {init_number} en base {init_base} vers la base {target_base}. "
            + "\n"
            f"Le résultat est : {target_number}"
            + "\n"

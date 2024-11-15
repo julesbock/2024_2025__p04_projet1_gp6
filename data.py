@@ -43,4 +43,3 @@ authorized_base_character_dic = {
     "10" : dec_character_list,
     "16" : hex_character_list
 }
-sign = "" 
