@@ -19,5 +19,3 @@ def ask_for_restart ():
             print(input_error_text)
 
 run_main()
-
-
